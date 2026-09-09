@@ -5,43 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta 
       name="description" 
-      content="Formulir prototipe untuk mencatat makanan berlebih yang akan ditawarkan melalui Sisabaik." 
+      content="Formulir prototipe untuk mencatat makanan berlebih yang akan ditawarkan melalui SisaBaik." 
     > 
-    <title>Tawarkan Makanan | Sisabaik</title> 
+    <title>Tawarkan Makanan | SisaBaik</title> 
     <link rel="stylesheet" href="styles.css"> 
   </head> 
   <body> 
-    <a href="#konten-utama">Lewati ke konten utama</a> 
+    <a class="skip-link" href="#konten-utama">Lewati ke konten utama</a> 
  
-    <header> 
-      <p><strong>Sisabaik</strong></p> 
-      <nav aria-label="Navigasi utama"> 
-        <ul> 
-          <li><a href="index.html">Beranda</a></li> 
-          <li><a href="daftar-penyedia.html">Daftar sebagai penyedia</a></li> 
-          <li> 
-            <a href="tawarkan-makanan.html" aria-current="page"> 
-              Tawarkan makanan 
-            </a> 
-          </li> 
-        </ul> 
-      </nav> 
+    <header class="site-header"> 
+      <div class="container header-layout"> 
+        <p class="brand">SisaBaik</p> 
+        <nav aria-label="Navigasi utama"> 
+          <ul class="nav-list"> 
+            <li><a href="index.html">Beranda</a></li> 
+            <li><a href="daftar-penyedia.html">Daftar sebagai penyedia</a></li> 
+            <li> 
+              <a href="tawarkan-makanan.html" aria-current="page"> 
+                Tawarkan makanan 
+              </a> 
+            </li> 
+          </ul> 
+        </nav> 
+      </div> 
     </header> 
  
-    <main id="konten-utama" tabindex="-1"> 
-      <h1>Catat penawaran makanan berlebih</h1> 
-      <p> 
-        Gunakan data fiktif selama praktikum. Jangan menawarkan makanan yang
-         rusak, kedaluwarsa, tercemar, atau tidak aman dikonsumsi. 
-      </p> 
-      <p id="petunjuk-wajib">Kolom bertanda <strong>*</strong> wajib diisi.</p> 
+    <main class="container" id="konten-utama" tabindex="-1"> 
+      <div class="page-heading"> 
+        <h1>Catat penawaran makanan berlebih</h1> 
+        <p class="lead"> 
+           Gunakan data fiktif selama praktikum. Jangan menawarkan makanan yang 
+          rusak, kedaluwarsa, tercemar, atau tidak aman dikonsumsi. 
+        </p> 
+        <p class="required-note" id="petunjuk-wajib">Kolom bertanda <strong>*</strong> wajib diisi.</p> 
+      </div> 
  
       <form 
+        class="form-card" 
         action="tawarkan-makanan.html" 
         method="get" 
         aria-describedby="petunjuk-wajib" 
       > 
-        <fieldset> 
+        <fieldset class="form-section"> 
           <legend>Identitas makanan</legend> 
  
           <p> 
@@ -64,8 +69,8 @@
               <option value="roti-kue">Roti atau kue</option> 
               <option value="buah-sayur">Buah atau sayur</option> 
               <option value="minuman">Minuman</option> 
-              <option value="bahan-pangan">Bahan pangan</option>
-               <option value="lainnya">Lainnya</option> 
+              <option value="bahan-pangan">Bahan pangan</option> 
+  <option value="lainnya">Lainnya</option> 
             </select> 
           </p> 
  
@@ -86,7 +91,7 @@
           </p> 
         </fieldset> 
  
-        <fieldset> 
+        <fieldset class="form-section"> 
           <legend>Jumlah dan skema pemulihan nilai</legend> 
  
           <p> 
@@ -98,11 +103,10 @@
               min="1" 
               max="1000" 
               step="1" 
-                 required 
+              required 
             > 
           </p> 
- 
-          <p> 
+           <p> 
             <label for="satuan">Satuan *</label><br> 
             <select id="satuan" name="satuan" required> 
               <option value="">Pilih satuan</option> 
@@ -127,17 +131,17 @@
             > 
           </p> 
  
-          <fieldset> 
+          <fieldset class="form-section"> 
             <legend>Jenis penawaran *</legend> 
             <p> 
-              <input
+              <input 
                 type="radio" 
                 id="jenis-diskon" 
                 name="jenis_penawaran" 
                 value="diskon" 
                 required 
-              > 
-              <label for="jenis-diskon">Dijual dengan harga diskon</label> 
+              >
+                <label for="jenis-diskon">Dijual dengan harga diskon</label> 
             </p> 
             <p> 
               <input 
@@ -164,16 +168,16 @@
             ><br> 
             <small id="bantuan-harga"> 
               Isi 0 jika makanan disalurkan tanpa biaya. Perbandingan dengan 
-               harga normal akan divalidasi menggunakan JavaScript pada chapter berikutnya. 
+              harga normal akan divalidasi menggunakan JavaScript pada chapter berikutnya. 
             </small> 
           </p> 
         </fieldset> 
  
-        <fieldset> 
+        <fieldset class="form-section"> 
           <legend>Keamanan dan pengambilan</legend> 
  
-          <p> 
-            <label for="batas-pengambilan">Batas waktu pengambilan *</label><br> 
+          <p>
+             <label for="batas-pengambilan">Batas waktu pengambilan *</label><br> 
             <input 
               type="datetime-local" 
               id="batas-pengambilan" 
@@ -194,10 +198,10 @@
             ></textarea> 
           </p> 
  
-          <fieldset> 
+          <fieldset class="form-section"> 
             <legend>Informasi alergen yang diketahui</legend> 
             <p> 
-                 <input type="checkbox" id="alergen-gluten" name="alergen" value="gluten"> 
+              <input type="checkbox" id="alergen-gluten" name="alergen" value="gluten"> 
               <label for="alergen-gluten">Gluten</label> 
             </p> 
             <p> 
@@ -228,9 +232,9 @@
           </p> 
         </fieldset> 
  
-        <fieldset> 
-          <legend>Konfirmasi keamanan pangan</legend>
-           <p> 
+        <fieldset class="form-section"> 
+          <legend>Konfirmasi keamanan pangan</legend> 
+          <p> 
             <input 
               type="checkbox" 
               id="konfirmasi-keamanan" 
@@ -243,15 +247,14 @@
               informasi kondisi serta alergennya telah ditulis dengan jujur. * 
             </label> 
           </p> 
-        </fieldset> 
- 
-        <p> 
-          <button type="submit">Kirim penawaran latihan</button> 
-          <button type="reset">Kosongkan formulir</button> 
+        </fieldset>
+         <p class="form-actions"> 
+          <button class="button" type="submit">Kirim penawaran latihan</button> 
+          <button class="button button-secondary" type="reset">Kosongkan formulir</button> 
         </p> 
       </form> 
  
-      <section aria-labelledby="batas-validasi-html"> 
+      <section class="section" aria-labelledby="batas-validasi-html"> 
         <h2 id="batas-validasi-html">Batas validasi pada tahap HTML</h2> 
         <p> 
           Atribut HTML dapat memeriksa isian wajib, format dasar, dan rentang 
@@ -261,9 +264,12 @@
           tetap diperiksa ulang pada server. 
         </p> 
       </section> 
-    </main>
-     <footer> 
-      <p>&copy; 2026 Sisabaik — Proyek pembelajaran Pengembangan Web.</p> 
+    </main> 
+ 
+    <footer class="site-footer"> 
+      <div class="container footer-layout"> 
+        <p>&copy; 2026 SisaBaik — Proyek pembelajaran Pengembangan Web.</p> 
+      </div> 
     </footer> 
   </body> 
 </html> 
