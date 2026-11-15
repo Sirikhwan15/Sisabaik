@@ -181,7 +181,7 @@ async function logout() {
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 SisaBaik</p>
+      <p>© 2026 SisaBaik Muhammad Ikhwan Alwavy</p>
       <p>Kesempatan kedua untuk makanan yang masih bernilai.</p>
     </div>
   </footer>
